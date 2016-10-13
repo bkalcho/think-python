@@ -42,9 +42,9 @@ def arc(t, r, angle):
     polyline(t, n, step_length, step_angle)
 
 
-world = tw.TurtleWorld()
-bob = tw.Turtle()
-bob.delay = 0.01
-arc(bob, 50, 60)
-
-tw.wait_for_user()
+#world = tw.TurtleWorld()
+#bob = tw.Turtle()
+#bob.delay = 0.01
+#arc(bob, 50, 60)
+#
+#tw.wait_for_user()
