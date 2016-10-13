@@ -21,15 +21,20 @@ def polyline(t, n, length, angle):
         tw.lt(t, angle)
 
 def polygon(t, length, n):
-    """Write square with a turtle."""
+    """Write polzgon of n sides, where each side is n in length."""
     angle = 360 / n
 
     polyline(t, n, length, angle)
 
 def circle(t, r):
+    """Write a circle with an radius r."""
     arc(t, r, 360)
 
 def arc(t, r, angle):
+    """
+    Write part of the circle, with radius r and part which is
+    distinguished by the angle in degrees.
+    """ 
     arc_length = 2 * math.pi * r * angle / 360
     n = int(arc_length / 3) + 1
     step_length = arc_length / n
