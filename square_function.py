@@ -17,8 +17,8 @@ def square(t, length):
 
 def polyline(t, n, length, angle):
     for i in range(n):
-        fd(t, length)
-        lt(t, angle)
+        tw.fd(t, length)
+        tw.lt(t, angle)
 
 def polygon(t, length, n):
     """Write square with a turtle."""
