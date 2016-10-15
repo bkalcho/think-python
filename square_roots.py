@@ -9,16 +9,18 @@ def newton_root(a):
     else:
         x = a / 2
         while True:
-            print(x)
+            #print(x)
             y = (x + a/x) / 2
             if abs(y-x) < epsilon:
                 break
             x = y
         return x
             
-a = newton_root(4)
-print("Square root of 4 is: " + str(a))
-b = newton_root(121)
-print("Square root of 121 is: " + str(b))
-c = newton_root(13)
-print("Square root of 13 is: " + str(c))
+
+if __name__ == '__main__':
+    a = newton_root(4)
+    print("Square root of 4 is: " + str(a))
+    b = newton_root(121)
+    print("Square root of 121 is: " + str(b))
+    c = newton_root(13)
+    print("Square root of 13 is: " + str(c))
