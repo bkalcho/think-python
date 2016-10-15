@@ -12,11 +12,15 @@ def middle(word):
     return word[1:-1]
     
 def is_palindrome(word):
-    if len(word) <= 1:
+    if word == word[::-1]:
         return True
-    elif first(word) != last(word):
+    else:
         return False
-    return is_palindrome(middle(word))
+    #if len(word) <= 1:
+    #    return True
+    #elif first(word) != last(word):
+    #    return False
+    #return is_palindrome(middle(word))
     
 if __name__ == '__main__':
     # test previous functions
