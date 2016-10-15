@@ -22,3 +22,8 @@ def rotate_word(word, n):
     for letter in word:
         res += rotate_letter(letter, n)
     return res
+
+
+# Test
+a = rotate_word("example", 13)
+print(a)
