@@ -1,6 +1,6 @@
 # Author: Bojan G. Kalicanin
 # Date: 15-Oct-2016
-# 
+# Rotate word for n spaces. Implementation of ROT13
 
 import string
 
