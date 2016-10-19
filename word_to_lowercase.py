@@ -28,6 +28,21 @@ def convert_to_lower(word):
     word = word.lower().strip(separators)
     return word
 
+def not_in_book(t):
+    """
+    Read a word list, and print word from the list t, which are not in
+    list words.
+    """
+    d = {}
+    f_obj = open('words.txt')
+    for line in f_obj:
+        word = line.strip()
+        d[word] = word
+        
+    for w in t:
+        if w not in d:
+            print(w)
+
 
 if __name__ == '__main__':
     filename = 'art_of_war.txt'
@@ -52,3 +67,5 @@ if __name__ == '__main__':
     print("Word occurences in descending order (top 20):")
     for i in range(20):
         print(h[i][0], h[i][1])
+        
+    not_in_book(t)
