@@ -45,6 +45,24 @@ def search_anagrams(words):
             d[s].append(w)
     return d
 
+def all_anagrams(filename):
+    """
+    Finds all anagrams in a list of words.
+    filename: string filename of the word list
+    Returns: a map from each word to a list of its anagrams.
+    """
+    d = {}
+    for line in open(filename):
+        word = line.strip().lower()
+        t = word_sig(word)
+
+        if t not in d:
+            d[t] = [word]
+        else:
+            d[t].append(word)
+    return d
+
+
 def print_anagram_sets(d):
     """Print the anagram sets in d."""
     for v in d.values():
@@ -71,11 +89,13 @@ def filter_length(d, n):
             res[k] = v
     return res
 
-s =[]
-filename = 'words.txt'
-t = read_file(filename)
-d = search_anagrams(t)
-print_anagram_sets_in_order(d)
 
-eight_letter = filter_length(d, 8)
-print_anagram_sets_in_order(eight_letter)
+if __name__ == "__main__":
+    s =[]
+    filename = 'words.txt'
+    t = read_file(filename)
+    d = search_anagrams(t)
+    print_anagram_sets_in_order(d)
+    
+    eight_letter = filter_length(d, 8)
+    print_anagram_sets_in_order(eight_letter)
