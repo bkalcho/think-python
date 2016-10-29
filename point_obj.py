@@ -27,7 +27,7 @@ class Point(object):
         else:
             return self.adding_tuple(other)
     
-    def __rad__(self, other):
+    def __radd__(self, other):
         """Right side addition."""
         return self.__add__(other)
             
