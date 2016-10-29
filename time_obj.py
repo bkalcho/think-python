@@ -2,6 +2,8 @@
 # Date: 29-Oct-2016
 # Representation of the time.
 
+import operator
+
 class Time(object):
     """Represents a Time."""
     def __init__(self, hour=0, minute=0, second=0):
@@ -57,6 +59,11 @@ class Time(object):
         """Check if some time is after another."""
         return self.time_to_int() > other.time_to_int()
         
+    def __lt__(self, other):
+        t1 = self.hour, self.minute, self.second
+        t2 = other.hour, other.minute, other.second
+        return operator.lt(t1, t2)
+        
         
 def int_to_time(seconds):
     time = Time()
@@ -80,3 +87,4 @@ if __name__ == '__main__':
 
     duration = Time(1, 35)
     print(start + duration)
+    print(start > end)
